@@ -21,7 +21,7 @@ jobs:
           key: breaking-state-${{ github.run_id }}
           restore-keys: breaking-state-
       - name: Check the news
-        run: node breaking-alerts.js --test
+        run: node breaking-alerts.js --once
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
